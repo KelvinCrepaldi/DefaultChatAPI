@@ -1,9 +1,10 @@
 import AWS from "aws-sdk"
+import "dotenv/config";
 
 AWS.config.update({
-  accessKeyId: 'AKIA4EP2DR6GPZYF5RXN',
-  secretAccessKey: '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',
-  region: 'us-east-1'
+  accessKeyId: process.env.AWS_ACCESSKEYID,
+  secretAccessKey: process.env.AWS_SECRETACCESSKEY,
+  region: process.env.AWS_REGION
 });
 
  const s3 = new AWS.S3();
